@@ -14,21 +14,31 @@ Usage Examples:
 
 ### Linux:
 - $ ./cyclone_sort.bin -i tmp.txt -o output.txt
-- 2023/01/02 09:54:10 Reading file...
-- 2023/01/02 09:54:17 Lines in: 16053567
-- 2023/01/02 09:54:17 Lines out: 15053568
-- 2023/01/02 09:54:17 Duplicates Removed: 999999
-- 2023/01/02 09:54:17 Elapsed time: 6.111929518s
-- 2023/01/02 09:54:17 Lines Per Second Processed: 2626596
+- Reading file...tmp.txt
+- Lines in.......16053567
+- Lines out......15053568
+- Dups...........999999
+- Time...........5.730008666s
+- Lines/Sec......2801665
 
 ### Windows:
 - \> .\cyclone_sort.exe -i tmp.txt -o output.txt
-- 2023/01/02 09:59:14 Reading file...
-- 2023/01/02 09:59:21 Lines in: 16053567
-- 2023/01/02 09:59:21 Lines out: 15053568
-- 2023/01/02 09:59:21 Duplicates Removed: 999999
-- 2023/01/02 09:59:21 Elapsed time: 7.0531078s
-- 2023/01/02 09:59:21 Lines Per Second Processed: 2276098
+- Reading file...tmp.txt
+- Lines in.......16053567
+- Lines out......15053568
+- Dups...........999999
+- Time...........7.0531078s
+- Lines/Sec......2276098
 
 ### Mac:
 - _untested_
+
+### comparison between cyclone_sort, sort -u & rling
+- cyclone_sort.bin -i tmp.txt -o output.txt
+- 5.730s
+- time sort -u tmp.txt > output.txt
+- 5.434s
+- time LC_ALL=C sort -u tmp.txt > output.txt
+- 1.513s
+- rling -s tmp.txt output.txt
+- 1.039s
