@@ -16,7 +16,7 @@ import (
 // writes to stdout or file with -o file flag -- code needs cleaned up
 // currently cyclone sort is not as fast as gnu sort, but this provides an alternative that is cross compiled for Linux, Windows & Mac
 // writen by cyclone
-// v0.3beta-2023.1.1-2300
+// vbeta3-2023.1.1-2300
 
 func versionFunc() {
 	fmt.Println("Cyclone Sort")
