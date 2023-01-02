@@ -1,5 +1,5 @@
 # Cyclone Sort
-Alternative to sort (GNU coreutils) that is cross compiled for Linux, Windows & Mac.
+Alternative to sort (GNU coreutils) that is cross compiled for Linux, Windows & Mac. Cyclone Sort by default will sort and dedup input. See usage examples below.
 
 Usage Examples:
 - sort -help _(displays help)_
