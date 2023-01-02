@@ -20,7 +20,7 @@ import (
 
 func versionFunc() {
 	fmt.Println("Cyclone Sort")
-	fmt.Println("v0.3beta-2023.1.1-2300")
+	fmt.Println("vbeta3-2023.1.1-2300")
 }
 
 func helpFunc() {
