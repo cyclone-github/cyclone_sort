@@ -11,21 +11,30 @@ import (
 	"encoding/base64"
 )
 
+// version history
+// vbeta1-2023.1.1-1300; original version, no optimizations or goroutines, slow performance
+// vbeta2-2023.1.1-1530; added goroutines and code optimization which gave better performance
+// vbeta3-2023.1.1-2300; cleaned up code, initial release on github
+// vbeta3-2023.1.2-1100; added additional comments, edited versionFunc, helpFunc & "Lines in"
+
+// TODO: 
+// optimize code for faster performance
+
+// INFO:
 // read input file into memory, sort, deduplicate, then write to output
-// reads from stdin or file with -i file flag -- code needs cleaned up
-// writes to stdout or file with -o file flag -- code needs cleaned up
-// currently cyclone sort is not as fast as gnu sort, but this provides an alternative that is cross compiled for Linux, Windows & Mac
+// reads from stdin or file with -i file flag
+// writes to stdout or file with -o file flag
+// currently cyclone sort is not as fast as gnu sort, but provides an alternative that is cross compiled for Linux, Windows & Mac
 // writen by cyclone
-// vbeta3-2023.1.1-2300
 
 func versionFunc() {
 	fmt.Println("Cyclone Sort")
-	fmt.Println("vbeta3-2023.1.1-2300")
+	funcBase64Decode("dmJldGEzLTIwMjMuMS4yLTExMDAK")
 }
 
 func helpFunc() {
 	versionFunc()
-	fmt.Println("\nSorts and deduplicates by reading entire file into memory.\n")
+	fmt.Println("Sorts and deduplicates by reading entire file into memory.\n")
 	fmt.Println("Usage: sort -i input.txt -o output.txt\n")
 	fmt.Println("cat input.txt | sort > output.txt\n")
 	fmt.Println("Defaults to stdin if -i file is not specified")
@@ -86,6 +95,7 @@ func main() {
 			lines = append(lines, scanner.Text())
 			linesIn++ // update line counter
 		}
+		log.Printf("Lines in: %d\n", linesIn)
 
 		// Sort slice
 		sort.Strings(lines)
@@ -139,7 +149,6 @@ func main() {
 		elapsedTime := time.Since(startTime)
 
 		// Print statistics
-		log.Printf("Lines in: %d\n", linesIn)
 		log.Printf("Lines out: %d\n", deduplicatedLines)
 		log.Printf("Duplicates Removed: %d\n", linesIn-deduplicatedLines)
 		log.Printf("Elapsed time: %v\n", elapsedTime)
