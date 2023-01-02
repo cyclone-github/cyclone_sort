@@ -2,7 +2,7 @@
 Alternative to sort (GNU coreutils) that is cross compiled for Linux, Windows & Mac. Cyclone Sort by default will sort and dedup input. See usage examples below.
 
 Usage Examples:
--  -help _(displays help)_
+- cyclone_sort -help _(displays help)_
 - cyclone_sort -version _(displays version info)_
 - cyclone_sortsort -i input.txt -o output.txt
 - cat input.txt | cyclone_sort > output.txt
