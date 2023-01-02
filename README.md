@@ -18,8 +18,8 @@ Usage Examples:
 - 2023/01/02 09:54:17 Lines in: 16053567
 - 2023/01/02 09:54:17 Lines out: 15053568
 - 2023/01/02 09:54:17 Duplicates Removed: 999999
-- 2023/01/02 09:54:17 Elapsed time: 6.41967925s
-- 2023/01/02 09:54:17 Lines Per Second Processed: 2500681
+- 2023/01/02 09:54:17 Elapsed time: 6.111929518s
+- 2023/01/02 09:54:17 Lines Per Second Processed: 2626596
 
 ### Windows:
 - \> .\cyclone_sort.exe -i tmp.txt -o output.txt
